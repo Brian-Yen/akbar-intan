@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Intan 🤍</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#ffd6e8,#fff3ec,#fff);
+color:#5a2a3a;
+overflow-x:hidden;
+}
+
+section{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:25px;
+}
+
+h1,h2{
+font-family:'Playfair Display',serif;
+}
+
+button{
+background:#b03a5b;
+border:none;
+color:white;
+padding:12px 30px;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
+margin-top:25px;
+transition:0.3s;
+}
+
+button:hover{
+background:#8f2f4b;
+transform:scale(1.05);
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.12);
+max-width:650px;
+margin:15px auto;
+animation:fade 1s ease;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:18px;
+max-width:900px;
+width:100%;
+}
+
+.gallery div{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 8px 18px rgba(0,0,0,0.12);
+}
+
+.gallery img{
+width:100%;
+height:280px;
+object-fit:cover;
+}
+
+.gallery p{
+padding:15px;
+font-size:14px;
+line-height:1.6;
+}
+
+.hidden{display:none}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px)}
+to{opacity:1;transform:translateY(0)}
+}
+</style>
+</head>
+
+<body>
+
+<section id="open">
+<h1>Hai Intan 🤍</h1>
+<p>Aku bikin ruang kecil ini, khusus untuk kamu.</p>
+<p>Pelan-pelan ya, karena setiap halaman menyimpan rasa.</p>
+<button onclick="next('story')">Masuk ke Dunia Kita 💌</button>
+</section>
+
+<section id="story" class="hidden">
+<h2>Cerita Singkat Kita ✨</h2>
+<div class="card">
+<p>
+Dari awal kenal yang sederhana, sampai akhirnya saling nyaman.  
+Kita belajar tertawa, bertengkar kecil, saling memahami, dan tumbuh bersama.  
+<br><br>
+Dan dari semua perjalanan itu, aku sadar…  
+<b>kamu adalah rumah.</b>
+</p>
+</div>
+<button onclick="next('gallery')">Lihat Kenangan Kita 📸</button>
+</section>
+
+<section id="gallery" class="hidden">
+<h2>Kenangan Bersama Intan 🤍</h2>
+
+<div class="gallery">
+
+<div>
+<img src="1.jpg">
+<p>Di sini, aku belajar bahwa bahagia tidak harus mewah. Cukup ada kamu di sampingku.</p>
+</div>
+
+<div>
+<img src="2.jpg">
+<p>Senyummu selalu jadi alasan aku bersyukur setiap hari.</p>
+</div>
+
+<div>
+<img src="3.jpg">
+<p>Momen sederhana yang tanpa sadar jadi kenangan paling indah.</p>
+</div>
+
+<div>
+<img src="4.jpg">
+<p>Kita, hari biasa, dan rasa nyaman yang luar biasa.</p>
+</div>
+
+<div>
+<img src="5.jpg">
+<p>Langit, laut, dan kamu — kombinasi yang selalu menenangkan.</p>
+</div>
+
+<div>
+<img src="6.jpg">
+<p>Ekspresi lucumu yang selalu bikin aku jatuh cinta lagi dan lagi.</p>
+</div>
+
+</div>
+
+<button onclick="next('secret')">Ada Kejutan 💖</button>
+</section>
+
+<section id="secret" class="hidden">
+<h2>Untuk Intan 🤍</h2>
+<div class="card">
+<p>
+Terima kasih sudah hadir di hidupku.  
+Terima kasih sudah bertahan, memahami, dan menemani.  
+<br><br>
+Aku mungkin tidak sempurna, tapi aku selalu ingin memperjuangkan kita.  
+Semoga langkah kita selalu searah, dan bahagia selalu menemukan jalan pulang ke kita.
+<br><br>
+Selamat Hari Valentine, Intan 🤍  
+Aku sayang kamu.
+</p>
+</div>
+</section>
+
+<script>
+function next(id){
+document.querySelectorAll("section").forEach(s=>s.classList.add("hidden"));
+document.getElementById(id).classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
